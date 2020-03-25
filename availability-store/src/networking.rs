@@ -91,7 +91,7 @@ pub(crate) const MAX_CHAIN_HEADS: usize = 5;
 /// Type alias for a bounded vector of leaves.
 pub type LeavesVec = ArrayVec<[Hash; MAX_CHAIN_HEADS]>;
 
-pub mod benefit {
+pub(crate) mod benefit {
 	use sc_network::ReputationChange as Rep;
 	/// When a peer sends us a previously-unknown candidate statement.
 	pub const NEW_CANDIDATE: Rep = Rep::new(100, "Polkadot: New candidate");
